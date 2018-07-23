@@ -38,17 +38,17 @@ Interfaces for the House, City and HouseFilters objects.
 
 Observing a change in query params should be followed by:
 
-1.  Parsing the query params into HouseFilters object. Parsed filters should be pushed into HouseFiltersComponet [filters] @Input.
-2.  Fetching new houses list by invoking HouseService.getHouses method with the updated filters. Returned list should be pushed into HousesListComponent the [houses] @Input.
+1.  Parsing the query params into HouseFilters object. Parsed filters should be pushed into HouseFiltersComponet [filters] @​Input.
+2.  Fetching new houses list by invoking HouseService.getHouses method with the updated filters. Returned list should be pushed into HousesListComponent the [houses] @​Input.
 
-Filters change dispatched by HouseFilters (filters) @Output should be followed by the query params update, which will restart the query params flow (query params change -> parse filters -> fetch new list -> update filters form)
+Filters change dispatched by HouseFilters (filters) @​Output should be followed by the query params update, which will restart the query params flow (query params change -> parse filters -> fetch new list -> update filters form)
 
 ### HouseDetailsComponent
 
 Observing a change in the params should be followed by
 
 1.  Parsing the param object into the current id.
-2.  Fetching new house by invoking HouseService.getHouse method with the current id param. Returned house should be pushed into HouseCardComponent [house] @Input
+2.  Fetching new house by invoking HouseService.getHouse method with the current id param. Returned house should be pushed into HouseCardComponent [house] @​Input
 
 ## Checklist
 
