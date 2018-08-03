@@ -3,6 +3,7 @@ import { House } from '../models';
 import { HouseCardComponent } from './house-card.component';
 import { CustomMaterialModule } from '../custom-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HouseCardComponent', () => {
     let component: HouseCardComponent;
@@ -13,7 +14,8 @@ describe('HouseCardComponent', () => {
             declarations: [HouseCardComponent],
             imports: [
                 CustomMaterialModule,
-                BrowserAnimationsModule
+                BrowserAnimationsModule,
+                RouterTestingModule
             ]
         }).compileComponents();
     }));
@@ -21,11 +23,13 @@ describe('HouseCardComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(HouseCardComponent);
         component = fixture.componentInstance;
-        fixture.detectChanges();
     });
 
     // TODO(1pts)
-    it('should render house title', () => { });
+    it('should render house title', () => {
+        const el = fixture.nativeElement.querySelector('mat-card-title');
+        expect(el).toContain(component.house.title);
+    });
 
     // TODO(1pts)
     it('should render card desription', () => { });

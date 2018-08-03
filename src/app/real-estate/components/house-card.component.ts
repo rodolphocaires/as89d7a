@@ -10,7 +10,7 @@ import { House } from '../models';
         <mat-card-title>
             {{ house.title }}
         </mat-card-title>
-        <img mat-card-image [src]="house.image" [attr.alt]="house-title" />
+        <img mat-card-image [src]="house.image" [attr.alt]="house.title" />
         <mat-card-content>
             <p>Price: {{ house.price | currency:'USD':true }}</p>
             <p>{{ house.onSale ? 'On Sale!' : '' }}</p>

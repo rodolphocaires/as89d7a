@@ -3,6 +3,7 @@ import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { HousesFiltersComponent } from './houses-filters.component';
 import { CustomMaterialModule } from '../custom-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HousesFiltersComponent', () => {
     let component: HousesFiltersComponent;
@@ -14,7 +15,8 @@ describe('HousesFiltersComponent', () => {
             imports: [
                 CustomMaterialModule,
                 ReactiveFormsModule,
-                BrowserAnimationsModule
+                BrowserAnimationsModule,
+                RouterTestingModule
             ]
         }).compileComponents();
     }));
