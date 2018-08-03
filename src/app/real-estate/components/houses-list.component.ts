@@ -26,14 +26,14 @@ import { MatTableDataSource } from '@angular/material/table';
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="columns"></tr>
-            <tr mat-row *matRowDef="let row; columns: columns;" (click)="detail(row)" class="clickable"></tr>
+            <tr mat-row *matRowDef="let row; columns: columns;" [routerLink]="['/real-estate', row.id]" class="clickable"></tr>
         </table>
     </mat-card>
   `,
     styles: [`
         .houses-card {
             padding: 0;
-            margin: 0 0 16px 0;
+            margin: 0 0 30px 0;
         }
         .houses-card table {
             width: 100%;
@@ -50,11 +50,6 @@ export class HousesListComponent implements OnChanges {
     dataSource: MatTableDataSource<House[]>;
 
     ngOnChanges(changes: SimpleChanges) {
-        console.log(changes);
         this.dataSource = new MatTableDataSource<House[]>(changes.houses.currentValue);
-    }
-
-    detail(house: House) {
-
     }
 }

@@ -32,8 +32,6 @@ export class HousesService {
 
         const houses = R.filter(R.where(where))(HOUSES) as House[];
 
-        console.log(houses);
-
         return of(houses);
     }
 

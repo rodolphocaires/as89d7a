@@ -30,5 +30,6 @@ export class HouseDetailsComponent implements OnInit {
             TODO(3pts)
             Goal: fetch house based on the activated route's :id
         */
+        this.house$ = this.houseAPI.getHouse(+this.activatedRoute.snapshot.params['id']);
     }
 }
