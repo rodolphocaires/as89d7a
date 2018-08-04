@@ -12,9 +12,9 @@ import { House } from '../models';
         </mat-card-title>
         <img mat-card-image [src]="house.image" [attr.alt]="house.title" />
         <mat-card-content>
-            <p>Price: {{ house.price | currency:'USD':true }}</p>
-            <p>{{ house.onSale ? 'On Sale!' : '' }}</p>
-            <p>{{ house.description }}</p>
+            <p id="price">Price: {{ house.price | currency:'USD':true }}</p>
+            <p id="onSale">{{ house.onSale ? 'On Sale!' : '' }}</p>
+            <p id="description">{{ house.description }}</p>
         </mat-card-content>
     </mat-card>
   `,
